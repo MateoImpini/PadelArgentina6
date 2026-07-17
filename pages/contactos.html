@@ -43,9 +43,69 @@
         <section>
             <article class="tarjeta">
                 <h2 class="subtitulo">¿Cómo podemos ayudarte?</h2>
-                <p class="parrafo">Si tenés dudas sobre nuestros productos, envíos o cambios, escribinos por nuestras redes sociales o visitá nuestro local. Te respondemos a la brevedad.</p>
+                <p class="parrafo">Si tenés dudas sobre nuestros productos, envíos o cambios, escribinos por nuestras redes sociales, completá el formulario o visitá nuestro local. Te respondemos a la brevedad.</p>
             </article>
         </section>
+
+        <!-- Grilla de contacto: datos + formulario. Grid propio, responsivo -->
+        <div class="grid-contacto">
+            <!-- Datos de contacto -->
+            <section class="seccion-datos-contacto">
+                <article class="tarjeta">
+                    <h2 class="subtitulo">Nuestros datos</h2>
+                    <ul class="lista-datos-contacto">
+                        <li>
+                            <span class="dato-icono" aria-hidden="true">📍</span>
+                            <span class="parrafo">Av. del Pádel 1234, Buenos Aires, Argentina</span>
+                        </li>
+                        <li>
+                            <span class="dato-icono" aria-hidden="true">📞</span>
+                            <a class="enlace-nav" href="tel:+541145678900">+54 11 4567-8900</a>
+                        </li>
+                        <li>
+                            <span class="dato-icono" aria-hidden="true">✉️</span>
+                            <a class="enlace-nav" href="mailto:contacto@padelargentina.com">contacto@padelargentina.com</a>
+                        </li>
+                        <li>
+                            <span class="dato-icono" aria-hidden="true">🕒</span>
+                            <span class="parrafo">Lunes a sábados de 10 a 20 hs</span>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Formulario de contacto con clases de Bootstrap -->
+            <section class="seccion-formulario">
+                <article class="tarjeta">
+                    <h2 class="subtitulo">Escribinos</h2>
+                    <form class="formulario-contacto">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre y apellido</label>
+                            <input type="text" class="form-control campo-formulario" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control campo-formulario" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label">Asunto</label>
+                            <select class="form-select campo-formulario" id="asunto" name="asunto" required>
+                                <option value="" selected disabled>Elegí una opción</option>
+                                <option value="productos">Consulta sobre productos</option>
+                                <option value="envios">Envíos y seguimiento</option>
+                                <option value="cambios">Cambios y devoluciones</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control campo-formulario" id="mensaje" name="mensaje" rows="4" placeholder="Contanos en qué podemos ayudarte" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-detalle">Enviar mensaje</button>
+                    </form>
+                </article>
+            </section>
+        </div>
     </main>
 
     <!-- pie de pagina  -->

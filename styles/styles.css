@@ -685,6 +685,66 @@ el subtitulo dentro del modal no lleva la linea de acento inferior
 }
 
 /*
+grilla de la pagina de contacto: mobile-first, 1 columna apilada
+(datos arriba, formulario abajo). se abre a 2 columnas en desktop
+*/
+
+.grid-contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+/*
+lista de datos de contacto: cada item con su icono y el texto alineados
+*/
+
+.lista-datos-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    list-style: none;
+}
+
+.lista-datos-contacto li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dato-icono {
+    font-size: 22px;
+    line-height: 1;
+}
+
+/*
+formulario de contacto (campos de Bootstrap) recoloreado con la paleta.
+el :focus pisa el celeste por defecto de Bootstrap con el verde de acento
+*/
+
+.formulario-contacto .form-label {
+    color: var(--texto-principal);
+    font-weight: 500;
+}
+
+.campo-formulario {
+    background-color: var(--blanco-puro);
+    border: 1px solid rgba(80, 64, 46, 0.25);
+    color: var(--texto-principal);
+}
+
+.campo-formulario:focus {
+    background-color: var(--blanco-puro);
+    border-color: var(--acento);
+    box-shadow: 0 0 0 0.2rem rgba(46, 94, 52, 0.25);
+    color: var(--texto-principal);
+}
+
+.campo-formulario::placeholder {
+    color: var(--texto-tenue);
+}
+
+/*
 ============================
 Escalera responsiva (mobile-first)
 ============================
@@ -734,6 +794,10 @@ el menu vuelve a fila y el logo deja de ocupar el 100% del ancho
     .grid-nosotros {
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: "historia mision valores equipo";
+    }
+
+    .grid-contacto {
+        grid-template-columns: 1fr 1fr;
     }
 
     .brand-personalizado .titulo-principal {
