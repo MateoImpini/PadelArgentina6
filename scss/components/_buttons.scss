@@ -1,0 +1,39 @@
+// ============================================================
+//  components/_buttons.scss
+//  Botón de detalle de producto y la etiqueta (badge) de descuento.
+// ============================================================
+
+@use '../utilities/variables' as *;
+
+// Botón para abrir el modal de detalle de un producto.
+.btn-detalle {
+    align-self: flex-start;
+    // margin-top:auto empuja el botón al fondo de la tarjeta: como las
+    // tarjetas de una fila comparten altura, todos los botones se alinean.
+    margin-top: auto;
+    background-color: $acento-boton;
+    color: $texto-sobre-acento;
+    border: none;
+    transition: background-color $transicion, transform $transicion;
+
+    &:hover,
+    &:focus {
+        background-color: $acento-boton-hover;
+        color: $texto-sobre-acento;
+        transform: translateY(-2px);
+    }
+}
+
+// Etiqueta de descuento (badge de Bootstrap) recoloreada con el acento.
+.badge-descuento {
+    background-color: $acento-boton;
+    color: $texto-sobre-acento;
+    align-self: flex-start;
+    // Bootstrap pone white-space:nowrap en .badge; con textos largos
+    // ("20% OFF - ¡Oferta de temporada!") eso desborda la tarjeta angosta
+    // en mobile y genera scroll horizontal. Permitimos el salto de línea
+    // y limitamos el ancho al de la tarjeta.
+    white-space: normal;
+    max-width: 100%;
+    text-align: left;
+}
